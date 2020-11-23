@@ -27,9 +27,6 @@ function Dashboard() {
 
     const [ mailinglist ] = useCollectionData(emails, {idField: 'id'});
 
-
-
-
     return (
         <div>
             {mailinglist && mailinglist.map(email => <EmailList key={email.id} email={email}/>)}

@@ -13,7 +13,7 @@ const Routes = (props) => {
 
     return (
         <Switch>
-            <Route path='/dashboard' component={Dashboard} />
+            <Route path='/dashboard' component={Dashboard} exact/>
             <Route path='/' component={Landing} exact />
             {/* {user && ( <Route path='/dashboard' component={Dashboard} exact /> )} */}
         </Switch>
