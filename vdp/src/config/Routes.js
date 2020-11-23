@@ -4,7 +4,6 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import 'firebase/auth';
 import Landing from "../Pages/Landing";
 import Dashboard from "../Pages/Dashboard";
-import Signin from "../Pages/signin";
 
 const auth = firebase.auth();
 
@@ -14,9 +13,9 @@ const Routes = (props) => {
 
     return (
         <Switch>
-                <Route path='/' component={Landing} exact />
-                <Route path='/signin' component={Signin} exact />
-            {user && ( <Route path='/dashboard' component={Dashboard} exact /> )}
+            <Route path='/dashboard' component={Dashboard} />
+            <Route path='/' component={Landing} exact />
+            {/* {user && ( <Route path='/dashboard' component={Dashboard} exact /> )} */}
         </Switch>
     );
 };
