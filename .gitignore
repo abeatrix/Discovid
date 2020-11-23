@@ -1,0 +1,26 @@
+.env
+vdp/.env
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+vdp/node_modules
+vdp/.pnp
+vdp/.pnp.js
+
+# testing
+vdp/coverage
+
+# production
+vdp/build
+
+# misc
+vdp/.DS_Store
+vdp/.env.local
+vdp/.env.development.local
+vdp/.env.test.local
+vdp/.env.production.local
+
+vdp/npm-debug.log*
+vdp/yarn-debug.log*
+vdp/yarn-error.log*
