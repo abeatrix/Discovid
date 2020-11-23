@@ -1,4 +1,4 @@
-import './App.css';
+
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -18,8 +18,8 @@ const Signin = () => {
 
     return (
         <>
-            <button onClick={ signInWithGoogle }>Sign in with Google</button>
-            <h1>hi</h1>
+            <h1>Sign in / Sign up</h1>
+            <button onClick={ signInWithGoogle }>Sign in / Sign up with Google</button>
         </>
     )
 
