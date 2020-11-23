@@ -9,7 +9,14 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 if(!firebase.apps.length){
     firebase.initializeApp({
-
+        apiKey: process.env.REACT_APP_FB_APIKey,
+        authDomain: process.env.REACT_APP_FB_AUTHD,
+        databaseURL: process.env.REACT_APP_FB_DBURL,
+        projectId: "virtualdanceparty-ff346",
+        storageBucket: process.env.REACT_APP_FB_SB,
+        messagingSenderId: process.env.REACT_APP_FB_MSID,
+        appId: process.env.REACT_APP_FB_APPID,
+        measurementId: "G-LXHE6CTR7G"
     })
 }
 
