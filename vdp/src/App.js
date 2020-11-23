@@ -1,13 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import Dashboard from './Pages/Dashboard'
-import Landing from './Pages/Landing'
+import Routes from './config/Routes'
 
 function App() {
 
   return (
     <div className="App">
-      <Landing />
+      <Routes />
     </div>
   );
 }
