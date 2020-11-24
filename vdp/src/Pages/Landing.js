@@ -5,7 +5,10 @@ import "firebase/firestore";
 import "firebase/analytics";
 import "firebase/auth";
 import Header from "../Components/Landing/Header"
-import {FormContainer} from "../Components/Landing/Styled"
+import {FormContainer, FooterContainer} from "../Components/Landing/Styled"
+import Features from "../Components/Landing/Features"
+import Past from "../Components/Landing/Past"
+import Footer from "../Components/Footer/index"
 
 
 if(!firebase.apps.length){
@@ -48,6 +51,7 @@ function Landing() {
     return (
     <>
         <Header/>
+        <Past/>
         <FormContainer>
             {!confirmation ?
             <form onSubmit={handleSubmit}>
@@ -59,6 +63,8 @@ function Landing() {
             </form> : <h1>Hi</h1>
             }
         </FormContainer>
+        <Features/>
+        <Footer/>
     </>
     );
 }
