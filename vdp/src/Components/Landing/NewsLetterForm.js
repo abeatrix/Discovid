@@ -6,8 +6,22 @@ import "firebase/analytics";
 import "firebase/auth";
 import {FormContainer, FormHeading, HeaderH2} from "../Landing/Styled"
 import Confirmation from "../Landing/Confirmation"
-import {Form, FormControl, Button} from "react-bootstrap";
+import {Form, FormControl} from "react-bootstrap";
 import "../../App.css"
+
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+// import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 
 
 if(!firebase.apps.length){
@@ -22,6 +36,26 @@ if(!firebase.apps.length){
         measurementId: "G-LXHE6CTR7G"
     })
 }
+
+const useStyles = makeStyles((theme) => ({
+    paper: {
+      marginTop: theme.spacing(8),
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+    avatar: {
+      margin: theme.spacing(1),
+      backgroundColor: theme.palette.secondary.main,
+    },
+    form: {
+      width: '100%', // Fix IE 11 issue.
+      marginTop: theme.spacing(1),
+    },
+    submit: {
+      margin: theme.spacing(3, 0, 2),
+    },
+  }));
 
 function NewsLetterForm() {
 
@@ -49,32 +83,54 @@ function NewsLetterForm() {
 
     };
 
+    const classes = useStyles();
+
     return (
         <FormContainer>
-            <FormHeading>
-                <HeaderH2>Keep me updated on fun shit</HeaderH2>
-                <small>Be the first one to learn about new events, exclusive interviews with artists, chances to meet your favorite artist and more.</small>
-            </FormHeading>
             {!confirmation ?
             <form onSubmit={handleSubmit}>
-                <input
-                    className="mr-sm-2"
-                    placeholder="Full Name"
+                <FormHeading>
+                    <HeaderH2 className="main-font">Keep me updated on fun shit</HeaderH2>
+                    <p>Be the first one to learn about new events, exclusive interviews with artists, chances to meet your favorite artist and more.</p>
+                </FormHeading>
+                <TextField
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    id="email"
+                    label="Full Name"
+                    name="name"
+                    autoComplete="name"
+                    autoFocus
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                 />
-                <input
-                    className="mr-sm-2"
-                    placeholder="Email"
+                <TextField
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    id="email"
+                    label="Email Address"
+                    name="email"
+                    autoComplete="email"
+                    autoFocus
                     value={formValue}
                     onChange={(e) => setFormValue(e.target.value)}
                 />
-                <button type="submit">✈️</button>
+                <Button
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                    className={classes.submit}
+                >
+                    Notify Me!
+                </Button>
+                <FormHeading>
+                    <small className="mt-5">We got your back, we won't send you spam or share your information with anyone</small>
+                </FormHeading>
             </form> : <Confirmation/>
+            
             }
-            <FormHeading>
-                <small>We got your back, we won't send you spam or share your information with anyone</small>
-            </FormHeading>
         </FormContainer>
     );
 }

@@ -2,7 +2,10 @@ import React from "react";
 
 const Confirmation = () => {
     return (  
-        <h1>Thank You</h1>
+        <>
+        <h1>I'm ready to dance!</h1>
+        <h4>Thanks for signing up for our updates. Hope to see you dancing soon!</h4>
+        </>
     );
 }
  
