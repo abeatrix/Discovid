@@ -55,28 +55,25 @@ function NewsLetterForm() {
         <FormContainer>
             {!confirmation ?
             <form onSubmit={handleSubmit}>
-            <h2>Sign Up for our newsletter</h2>
-            <Form inline>
-                <FormControl
+                <input
                     className="mr-sm-2"
                     placeholder="First Name"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    />
-                <FormControl
+                />
+                <input
                     className="mr-sm-2"
                     placeholder="Last Name"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
-                    />
-                <FormControl
+                />
+                <input
                     className="mr-sm-2"
                     placeholder="Email"
                     value={formValue}
                     onChange={(e) => setFormValue(e.target.value)}
-                    />
-                <Button type="submit">✈️</Button>
-            </Form>
+                />
+                <button type="submit">✈️</button>
             </form> : <Confirmation/>
             }
         </FormContainer>
