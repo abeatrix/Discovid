@@ -29,10 +29,9 @@ export const VideoBG = styled.video`
     z-index: 0;
 `
 export const HeaderContent = styled.div`
+    width: 100%;
     z-index: 3;
-    max-width: 1200px;
     position: absolute;
-    padding 0px 30px;
     display: flex;
     top: 0;
     left: 0;
