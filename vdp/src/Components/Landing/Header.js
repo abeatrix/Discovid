@@ -14,7 +14,7 @@ const Header = () => {
                 </HeaderBG>
                 <HeaderContent>
                     <Menu>
-                        <HeaderH1>logo</HeaderH1>                        
+                        <HeaderH1>logo</HeaderH1>
                     </Menu>
                 </HeaderContent>
             </HeaderContainer>

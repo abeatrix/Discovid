@@ -12,7 +12,7 @@ function Landing() {
         <Header/>
         <Features/>
         <NewsLetterForm/>
-        <Features/>
+        <Past/>
         <Footer/>
     </>
     );

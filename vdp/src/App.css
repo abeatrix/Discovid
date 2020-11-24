@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -42,4 +46,56 @@ th, td {
 
 .featurescard {
   background-color: white;
+  width: 25rem;
+  height: 25rem
+}
+
+.darknav{
+  background-color: black;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: 20px 50px;
+  /* margin: 30px; */
+}
+
+.darknav a{
+  color: white;
+}
+
+.alinks {
+  padding-right: 50px;
+  color: white;
+}
+
+.navbtn{
+  background-color: black;
+  color: white;
+  border-style: none;
+  padding-right: 20px;
+}
+
+.navbtn:active, .navbtn:hover{
+  color: white;
+  text-decoration: none;
+}
+
+
+@media (max-width: 800px) {
+
+  .formbtn{
+    justify-content: center;
+  }
+
+  .menulogo{
+   width: 200px;
+  }
+
+  .alinks{
+    padding: 0px;
+  }
+
+  .navbtns{
+    display: block;
+  }
+
 }

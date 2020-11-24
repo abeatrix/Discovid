@@ -1,5 +1,5 @@
 import React from 'react';
-import {FooterContainer, FooterWrapper, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FootLinkItem, FooterLink, FooterSocialContainer, SocialMediaWrapper, SocialLogo, CopyRights, SocialIcons, SocialIconLink} from './Styled';
+import {FooterContainer, FooterWrapper, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FootLinkItem, FooterLink, MainFooterLinkItems, SocialIconLink} from './Styled';
 import { FaFacebook, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa'
 
 const Footer = () => {
@@ -18,6 +18,26 @@ const Footer = () => {
                             <FooterLink to='/'>Past</FooterLink>
                             <FooterLink to='/'>Upcoming</FooterLink>
                         </FooterLinkItems>
+
+                        <MainFooterLinkItems>
+                            <FootLinkItem>
+                            <img
+                                alt="Discovid"
+                                src="https://i.ibb.co/j5PM4hV/discovid.png"
+                                width="100px"
+                                className="d-inline-block align-top"
+                            />
+                            </FootLinkItem>
+                            <FooterLink>Tel. (123) 456-7890</FooterLink>
+                            <FooterLink to='/'>info@discovid.com</FooterLink>
+                            <FootLinkItem>
+                                <SocialIconLink href='https://github.com/abeatrix' target='_blank' aria-label='GitHub'><FaGithub/></SocialIconLink>
+                                <SocialIconLink href='https://github.com/gabtorre' target='_blank' aria-label='Twitter'><FaTwitter/></SocialIconLink>
+                                <SocialIconLink href='https://facebook.com' target='_blank' aria-label='Facebook'><FaFacebook/></SocialIconLink>
+                                <SocialIconLink href='https://instagram.com' target='_blank' aria-label='Facebook'><FaInstagram/></SocialIconLink>
+                            </FootLinkItem>
+                        </MainFooterLinkItems>
+
                         <FooterLinkItems>
                             <FootLinkItem>SUPPORT</FootLinkItem>
                             <FooterLink to='/'>FAQs</FooterLink>
@@ -30,20 +50,7 @@ const Footer = () => {
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
-                <FooterSocialContainer>
-                    <SocialMediaWrapper>
-                        <SocialLogo to='/'>
-                        © {new Date().getFullYear()} LOGO
-                        </SocialLogo>
-                        <CopyRights>A Virtual Dance Party Organizer</CopyRights>
-                        <SocialIcons>
-                            <SocialIconLink href='https://github.com/abeatrix' target='_blank' aria-label='GitHub'><FaGithub/></SocialIconLink>
-                            <SocialIconLink href='https://github.com/gabtorre' target='_blank' aria-label='Twitter'><FaTwitter/></SocialIconLink>
-                            <SocialIconLink href='https://facebook.com' target='_blank' aria-label='Facebook'><FaFacebook/></SocialIconLink>
-                            <SocialIconLink href='https://instagram.com' target='_blank' aria-label='Facebook'><FaInstagram/></SocialIconLink>
-                        </SocialIcons>
-                    </SocialMediaWrapper>
-                </FooterSocialContainer>
+
             </FooterWrapper>
         </FooterContainer>
     )

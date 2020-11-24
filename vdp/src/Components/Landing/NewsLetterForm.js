@@ -4,9 +4,10 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/analytics";
 import "firebase/auth";
-import {FormContainer} from "../Landing/Styled"
+import {FormContainer, FormHeading, HeaderH2} from "../Landing/Styled"
 import Confirmation from "../Landing/Confirmation"
 import {Form, FormControl, Button} from "react-bootstrap";
+import "../../App.css"
 
 
 if(!firebase.apps.length){
@@ -29,7 +30,6 @@ function NewsLetterForm() {
     const mailingList = firestore.collection("mailinglist");
 
     const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
     const [formValue, setFormValue] = useState("");
 
     const [confirmation, setConfirmation] = useState(false);
@@ -39,7 +39,6 @@ function NewsLetterForm() {
 
     await mailingList.add({
         firstName: firstName,
-        lastName: lastName,
         email: formValue,
         createdAt: firebase.firestore.FieldValue.serverTimestamp()
     });
@@ -51,23 +50,19 @@ function NewsLetterForm() {
     };
 
     return (
-    <>
         <FormContainer>
+            <FormHeading>
+                <HeaderH2>Keep me updated on fun shit</HeaderH2>
+                <small>Be the first one to learn about new events, exclusive interviews with artists, chances to meet your favorite artist and more.</small>
+            </FormHeading>
             {!confirmation ?
             <form onSubmit={handleSubmit}>
-            <h2>Sign Up for our newsletter</h2>
             <Form inline>
                 <FormControl
                     className="mr-sm-2"
-                    placeholder="First Name"
+                    placeholder="Full Name"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    />
-                <FormControl
-                    className="mr-sm-2"
-                    placeholder="Last Name"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
                     />
                 <FormControl
                     className="mr-sm-2"
@@ -75,12 +70,17 @@ function NewsLetterForm() {
                     value={formValue}
                     onChange={(e) => setFormValue(e.target.value)}
                     />
-                <Button type="submit">✈️</Button>
+                    <div className="formbtn">
+                    <Button type="submit" variant="secondary" className="formbtn">Notify Me!</Button>
+                    </div>
+
             </Form>
             </form> : <Confirmation/>
             }
+            <FormHeading>
+                <small>We got your back, we won't send you spam or share your information with anyone</small>
+            </FormHeading>
         </FormContainer>
-    </>
     );
 }
 

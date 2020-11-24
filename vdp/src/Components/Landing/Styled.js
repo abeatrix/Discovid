@@ -37,31 +37,68 @@ export const HeaderContent = styled.div`
     left: 0;
 `
 export const HeaderH1 = styled.h1 `
-    color: #6FFFB0;
+    color: white;
     font-size: 50px;
     text-align: center;
-    font-family: 'Sarina', cursive;
+    font-family: 'Inter', sans-serif;
 `
 export const FormContainer = styled.div`
-    z-index: 3;
     max-width: 100%;
-    height: 100px;
-    padding: 10%;
+    height: auto;
     display: flex;
+    padding: 5%;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 800px){
+        margin: 5%;
+        padding: 5%;
+    }
 `
+
+export const HeaderH2 = styled.h2 `
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+
+    @media screen and (max-width: 800px){
+        font-size: 20px;
+    }
+`
+
+export const FormHeading = styled.div`
+    padding: 10px;
+`
+
 export const FeaturesContainer = styled.div`
-    height: 500px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     background: black;
     padding: 10%
 
     @media screen and (max-width: 800px){
-        height: 600px;
+        padding: 10%;
+        margin: 5%;
     };
 `
+
+
+export const FeaturesWrapper = styled.div`
+    min-width: 100%;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    grid-gap: 2%;
+    padding: 5%;
+
+    @media screen and (max-width: 800px){
+        grid-template-columns: 1fr;
+        padding: 5%;
+        height: auto;
+    }
+`
+
 
 export const FeaturesHeader = styled.h1`
     font-size: 2.5rem;
@@ -69,6 +106,7 @@ export const FeaturesHeader = styled.h1`
     margin-bottom: 65px;
     text-align: left;
     margin-left: 1rem;
+
     @media screen and (max-width: 500px){
         font-size: 2rem;
     };
@@ -79,22 +117,6 @@ export const FeaturesH2 = styled.h2`
     margin-bottom: 10px;
 `
 
-
-export const FeaturesWrapper = styled.div`
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-    grid-gap: 10px;
-    padding: 50px;
-
-    @media screen and (max-width: 800px){
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-        height: auto;
-    }
-`
 export const FeaturesCard = styled.div`
     background: white;
     display: flex;
