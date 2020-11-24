@@ -1,11 +1,15 @@
 import React from "react";
+import { useRef, useState } from "react";
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/analytics";
+import "firebase/auth";
 import Header from "../Components/Landing/Header"
 import NewsLetterForm from '../Components/Landing/NewsLetterForm'
 import {FormContainer, FooterContainer} from "../Components/Landing/Styled"
 import Features from "../Components/Landing/Features"
 import Past from "../Components/Landing/Past"
 import Footer from "../Components/Footer/index"
-
 
 if(!firebase.apps.length){
     firebase.initializeApp({
@@ -20,23 +24,34 @@ if(!firebase.apps.length){
     })
 }
 
+
 function Landing() {
+    const firestore = firebase.firestore();
+
+    const mailingList = firestore.collection("mailinglist");
+
+    const [formValue, setFormValue] = useState("");
+
+    const [confirmation, setConfirmation] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+    await mailingList.add({
+        email: formValue,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    setConfirmation(true);
+
+    setFormValue("");
+
+    };
     return (
     <>
         <Header/>
+        <Features/>
         <NewsLetterForm/>
-        <Past/>
-        <FormContainer>
-            {!confirmation ?
-            <form onSubmit={handleSubmit}>
-            <input
-                value={formValue}
-                onChange={(e) => setFormValue(e.target.value)}
-                />
-            <button type="submit">✈️</button>
-            </form> : <h1>Hi</h1>
-            }
-        </FormContainer>
         <Features/>
         <Footer/>
     </>

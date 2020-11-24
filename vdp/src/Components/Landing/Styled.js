@@ -56,6 +56,7 @@ export const FeaturesContainer = styled.div`
     display: flex;
     flex-direction: column;
     background: black;
+    padding: 10%
 
     @media screen and (max-width: 800px){
         height: 600px;
@@ -86,11 +87,12 @@ export const FeaturesWrapper = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     grid-gap: 10px;
-    padding: 0 50px;
+    padding: 50px;
 
     @media screen and (max-width: 800px){
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         padding: 0 20px;
+        height: auto;
     }
 `
 export const FeaturesCard = styled.div`
