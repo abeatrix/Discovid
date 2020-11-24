@@ -5,6 +5,7 @@ import "firebase/firestore";
 import "firebase/analytics";
 import "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
+import Header from "../Components/Landing/Header"
 
 
 if(!firebase.apps.length){
@@ -42,6 +43,7 @@ function Landing() {
 
     return (
     <>
+    <Header/>
         <form onSubmit={handleSubmit}>
         <input
             value={formValue}
