@@ -133,6 +133,16 @@
   background-color: #E5E5E5;
 }
 
+#confirmationContainer{
+  font-family: 'Antonio', sans-serif;
+  padding: 5% auto;
+}
+
+#confirmationContainer>h1{
+  font-family: 'Antonio', sans-serif;
+  margin: 10px auto;
+}
+
 @media (max-width: 800px) {
 
   .formbtn{

@@ -40,6 +40,7 @@ export const HeaderH1 = styled.h1 `
     color: white;
     font-size: 50px;
     text-align: center;
+    font-family: 'Inter', sans-serif
 `
 export const FormContainer = styled.div`
     max-width: 100%;
