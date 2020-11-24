@@ -29,6 +29,8 @@ function Landing() {
 
     const [formValue, setFormValue] = useState("");
 
+    const [confirmation, setConfirmation] = useState(false);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -37,6 +39,8 @@ function Landing() {
         createdAt: firebase.firestore.FieldValue.serverTimestamp()
     });
 
+    setConfirmation(true);
+
     setFormValue("");
 
     };
@@ -44,13 +48,16 @@ function Landing() {
     return (
     <>
     <Header/>
+
+        {!confirmation ?
         <form onSubmit={handleSubmit}>
         <input
             value={formValue}
             onChange={(e) => setFormValue(e.target.value)}
-        />
+            />
         <button type="submit">✈️</button>
-        </form>
+        </form> : <h1>Hi</h1>
+        }
     </>
     );
 }
