@@ -1,5 +1,5 @@
 import React from 'react';
-import {FooterContainer, FooterWrapper, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FootLinkItem, FooterLink, MainFooterLinkItems, SocialIconLink} from './Styled';
+import {FooterContainer, FooterWrapper, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FootLinkItem, FooterLink, MainFooterLinkItems, SocialIconLink, FootLogo} from './Styled';
 import { FaFacebook, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa'
 
 const Footer = () => {
@@ -20,14 +20,14 @@ const Footer = () => {
                         </FooterLinkItems>
 
                         <MainFooterLinkItems>
-                            <FootLinkItem>
+                            <FootLogo>
                             <img
                                 alt="Discovid"
                                 src="https://i.ibb.co/j5PM4hV/discovid.png"
-                                width="100px"
+                                width="200px"
                                 className="d-inline-block align-top"
                             />
-                            </FootLinkItem>
+                            </FootLogo>
                             <FooterLink>Tel. (123) 456-7890</FooterLink>
                             <FooterLink to='/'>info@discovid.com</FooterLink>
                             <FootLinkItem>

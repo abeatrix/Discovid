@@ -99,3 +99,12 @@ th, td {
   }
 
 }
+
+@font-face {
+  font-family: 'Antonio';
+  src: local('Antonio'), url(./fonts/Antonio-Regular.ttf) format('truetype');
+}
+
+.main-font {
+  font-family: Antonio, Arial, sans-serif;
+}

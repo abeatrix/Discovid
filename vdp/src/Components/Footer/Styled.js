@@ -10,7 +10,7 @@ export const FooterContainer = styled.footer`
 `
 export const FooterWrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
     justify-content: space-evenly;
     grid-gap: 2%;
 `
@@ -28,7 +28,7 @@ export const FooterLinksWrapper = styled.div`
 export const FooterLinkItems = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+
     text-align: center;
     width: 200px;
     box-sizing: border-box;
@@ -42,14 +42,21 @@ export const FooterLinkItems = styled.div`
 export const MainFooterLinkItems = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+
     text-align: center;
     width: 200px;
     box-sizing: border-box;
     color: white;
 `
+// align-items: flex-start;
 
 export const FootLinkItem = styled.h1`
+    font-size: 15px;
+    margin-bottom: 16px;
+    font-weight: bold;
+`
+
+export const FootLogo = styled.div`
     font-size: 15px;
     margin-bottom: 16px;
     font-weight: bold;
