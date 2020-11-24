@@ -90,8 +90,9 @@ export const FeaturesWrapper = styled.div`
     padding: 0 50px;
 
     @media screen and (max-width: 800px){
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         padding: 0 20px;
+        height: auto;
     }
 `
 export const FeaturesCard = styled.div`
