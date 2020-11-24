@@ -12,7 +12,7 @@ const AdminMenu = () => {
     return (
         <>
         <Navbar expand="lg" variant="dark" className="w-100 justify-content-between darknav">
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="https://discovid19.herokuapp.com/">
             <img
                 alt="Discovid"
                 src="https://i.ibb.co/j5PM4hV/discovid.png"

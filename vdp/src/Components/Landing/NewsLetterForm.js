@@ -8,7 +8,6 @@ import {FormContainer, FormHeading, HeaderH2} from "../Landing/Styled"
 import Confirmation from "../Landing/Confirmation"
 import {Form, FormControl} from "react-bootstrap";
 import "../../App.css"
-
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -94,10 +93,11 @@ function NewsLetterForm() {
                     <p>Be the first one to learn about new events, exclusive interviews with artists, chances to meet your favorite artist and more.</p>
                 </FormHeading>
                 <TextField
+                    style={{marginRight: "20px"}}
                     variant="outlined"
                     margin="normal"
                     required
-                    id="email"
+                    id="name"
                     label="Full Name"
                     name="name"
                     autoComplete="name"
@@ -105,7 +105,9 @@ function NewsLetterForm() {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                 />
+
                 <TextField
+                    style={{marginRight: "20px"}}
                     variant="outlined"
                     margin="normal"
                     required
@@ -117,6 +119,7 @@ function NewsLetterForm() {
                     value={formValue}
                     onChange={(e) => setFormValue(e.target.value)}
                 />
+
                 <Button
                     type="submit"
                     variant="contained"
@@ -125,11 +128,12 @@ function NewsLetterForm() {
                 >
                     Notify Me!
                 </Button>
+
                 <FormHeading>
                     <small className="mt-5">We got your back, we won't send you spam or share your information with anyone</small>
                 </FormHeading>
             </form> : <Confirmation/>
-            
+
             }
         </FormContainer>
     );

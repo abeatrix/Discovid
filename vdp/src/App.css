@@ -43,6 +43,15 @@
   }
 }
 
+#forminputpadding{
+  margin-right: 20px;
+  display: inline-block
+}
+
+#forminputbtnpadding{
+  display: inline-block;
+  justify-content: center;
+}
 
 .featurescard {
   background-color: white;
