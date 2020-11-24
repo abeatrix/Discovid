@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
+
 .App {
   text-align: center;
 }
@@ -40,9 +42,7 @@
     transform: rotate(360deg);
   }
 }
-th, td {
-  padding: 5px 15px;
-}
+
 
 .featurescard {
   background-color: white;
@@ -56,6 +56,11 @@ th, td {
   font-family: 'Inter', sans-serif;
   padding: 20px 50px;
   /* margin: 30px; */
+}
+
+.darknavitem{
+  left: 0;
+  color: #89CCDC;
 }
 
 .darknav a{
@@ -79,6 +84,45 @@ th, td {
   text-decoration: none;
 }
 
+.admintitle{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+.dashboardtable{
+  padding: 2%;
+  background-color: #F9FAFB;
+  text-align: left;
+}
+
+#dashboardtabletitles{
+  padding: 10px 15px;
+  margin: 2px auto;
+  background-color: #DDE7EC;
+  border-left: 5px solid;
+  border-color: #F9FAFB;
+}
+
+.admin-card{
+  border-style: none;
+  background-color: #DDE7EC;
+  font-weight: bold;
+}
+
+.dashboardbtns{
+  padding: 2% 0;
+  text-align: left;
+}
+
+.dashboardbtns>button{
+  border-radius: 10%;
+  border-style: none;
+  width: 7rem;
+  margin-right: 10px;
+  padding: 1%;
+  font-weight: bold;
+  background-color: #E5E5E5;
+}
 
 @media (max-width: 800px) {
 
@@ -96,6 +140,10 @@ th, td {
 
   .navbtns{
     display: block;
+  }
+
+  .dashboardtable{
+    margin: 5% 0;
   }
 
 }

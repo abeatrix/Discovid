@@ -4,11 +4,12 @@ import 'firebase/firestore';
 
 function EmailList(props) {
     return (
-        <div>
-            <ListGroup variant="flush">
-                <ListGroup.Item>{props.email.email}</ListGroup.Item>
-            </ListGroup>
-        </div>
+        <tr>
+                <td>{props.email.email}</td>
+                <td>{props.email.firstName}</td>
+                <td>{props.email.createdAt.toDate().toDateString()}</td>
+                <td>Active</td>
+        </tr>
     )
 }
 

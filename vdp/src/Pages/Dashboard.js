@@ -4,9 +4,11 @@ import 'firebase/firestore';
 import EmailList from '../Components/Dashboard/EmailList'
 import {useCollectionData} from 'react-firebase-hooks/firestore'
 import { useCollection } from 'react-firebase-hooks/firestore';
-import { Card, CardDeck, Container } from  'react-bootstrap';
-import Menu from '../Components/Landing/Menu'
+import { Card, CardDeck, Container, Table } from  'react-bootstrap';
+import AdminMenu from '../Components/Dashboard/AdminMenu'
 import icon from '../../src/add_circle_outline-24px.svg'
+import Footer from '../Components/Footer/index'
+import "../App.css"
 
 if(!firebase.apps.length){
     firebase.initializeApp({
@@ -31,32 +33,32 @@ function Dashboard() {
 
     const [ mailinglist ] = useCollectionData(emails, {idField: 'id'});
 
-    
+
     return (
         <>
-        <Menu/>
+        <AdminMenu/>
         <Container className="mt-5">
             {!mailinglist && <span>Loading...</span>}
-            <h2 className="text-left">Newsletter Email Signup List</h2>
+            <h2 className="text-left admintitle" styles={{fontWeight: "700"}}>Newsletter Email Signup List</h2>
             <CardDeck className="mt-5">
-            <Card>
-            <Card.Header>Total Active Signups:</Card.Header>
+            <Card className="admin-card">
+            <Card.Header className="admin-card">Total Active Signups:</Card.Header>
                 <Card.Body>
                 <Card.Title>
                     {mailinglist && mailinglist.length}
                 </Card.Title>
             </Card.Body>
             </Card>
-            <Card>
-            <Card.Header>MTD Signups:</Card.Header>
+            <Card className="admin-card">
+            <Card.Header className="admin-card">MTD Signups:</Card.Header>
                 <Card.Body>
                 <Card.Title>
                     {mailinglist && mailinglist.length}
                 </Card.Title>
             </Card.Body>
             </Card>
-            <Card>
-            <Card.Header>Most Recent Signup</Card.Header>
+            <Card className="admin-card">
+            <Card.Header className="admin-card">Most Recent Signup</Card.Header>
                 <Card.Body>
                 <Card.Title>
                     {mailinglist && mailinglist[0].createdAt.toDate().toDateString()}
@@ -65,12 +67,28 @@ function Dashboard() {
             </Card>
             <img src={icon} />
             </CardDeck>
-            
-           
-            {mailinglist && console.log(mailinglist[0].createdAt)}            
-            
-            {mailinglist && mailinglist.map(email => <EmailList key={email.id} email={email} />)}
+
         </Container>
+
+        <Container className="mt-5">
+        <div className="dashboardbtns">
+        <button>FILTER</button><button>EDIT</button>
+        </div>
+        <Table borderless hover responsive className="dashboardtable">
+            <thead>
+                <tr>
+                <th id="dashboardtabletitles">Email</th>
+                <th id="dashboardtabletitles">Full Name</th>
+                <th id="dashboardtabletitles">Subscription Date</th>
+                <th id="dashboardtabletitles">Subscription Status</th>
+                </tr>
+            </thead>
+            <tbody>
+            {mailinglist && mailinglist.map(email => <EmailList key={email.id} email={email} />)}
+            </tbody>
+        </Table>
+        </Container>
+        <div className="dashboardbtns"></div>
         </>
     )
 }
