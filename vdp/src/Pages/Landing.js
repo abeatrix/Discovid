@@ -8,6 +8,7 @@ import Header from "../Components/Landing/Header"
 import {FormContainer, FooterContainer} from "../Components/Landing/Styled"
 import Features from "../Components/Landing/Features"
 import Past from "../Components/Landing/Past"
+import Footer from "../Components/Footer/index"
 
 
 if(!firebase.apps.length){
@@ -63,6 +64,7 @@ function Landing() {
             }
         </FormContainer>
         <Features/>
+        <Footer/>
     </>
     );
 }

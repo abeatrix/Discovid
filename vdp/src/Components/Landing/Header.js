@@ -11,9 +11,6 @@ const Header = () => {
                 <HeaderBG>
                     <VideoBG autoPlay loop muted src={Video} type='video/mp4' />
                 </HeaderBG>
-                <HeaderContent>
-                        <HeaderH1>vave</HeaderH1>
-                </HeaderContent>
             </HeaderContainer>
         </>
     );

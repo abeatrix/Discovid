@@ -79,10 +79,6 @@ export const FeaturesH2 = styled.h2`
     margin-bottom: 10px;
 `
 
-export const FeaturesP = styled.p`
-    font-size: 1rem;
-    text-align: center;
-`
 
 export const FeaturesWrapper = styled.div`
     max-width: 1000px;
@@ -102,9 +98,7 @@ export const FeaturesCard = styled.div`
     background: white;
     display: flex;
     align-items: center;
-    border-radius: 10px;
-    max-height: 350px;
-    padding: 30px;
+    height: 300px;
     box-shadow: none;
     transition: all 0.2s ease-in-out;
 
@@ -113,25 +107,25 @@ export const FeaturesCard = styled.div`
         cursor: pointer;
     }
 `
-
-export const FeaturesCard2 = styled.div`
-    background: white url("https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/sites/21/2019/06/30074333/EDCLV2019_0520_013108-7298_MVA-gallery.jpg)no-repeat fixed center;
+export const FeaturesCardTop = styled.div`
     display: flex;
     align-items: center;
-    border-radius: 10px;
-    height: 200px;
-    padding: 30px;
-    box-shadow: none;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-        transform: scale(1.02);
-        cursor: pointer;
-    }
-`
-export const FeaturesIcon = styled.img`
     height: 150px;
-    width: 150px;
+`
+export const FeaturesCardBot = styled.div`
+    display: flex;
+    align-items: center;
+    height: 150px;
+`
+
+export const FeaturesP = styled.p`
+    font-size: 1rem;
+    text-align: center;
+`
+
+export const FeaturesIcon = styled.img`
+    top: 0;
+    width: 100%;
     margin-bottom: 10px;
 `
 
