@@ -24,8 +24,8 @@ const Menu = () => {
                     </div>
                     <Nav.Link href="https://discovid19.herokuapp.com/dashboard">Explore</Nav.Link>
                 </Nav>
-                <Form inline className="navbtns">
-                <Button type="submit" variant="link" className="navbtn">Sign In</Button>
+                <Form inline id="navbtns">
+                <Button type="submit" variant="link" id="navbtn">Sign In</Button>
                 <Button type="submit" variant="light">Sign Up</Button>
                 </Form>
             </Navbar.Collapse>

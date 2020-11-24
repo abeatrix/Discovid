@@ -17,6 +17,38 @@ export const HeaderBG = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: lightblue url("https://i.ibb.co/PCw3z6n/alexander-popov-h-Tv8aa-Pzi-OQ-unsplash.jpg") no-repeat fixed center;
+`
+export const HeaderTitleContent = styled.div`
+    z-index: 3;
+    max-width: 1200px;
+    position: absolute;
+    padding 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+`
+export const HeaderTitleH1 = styled.h1 `
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    font-weight: bold;
+
+    @media screen and (max-width: 800px){
+        font-size: 30px;
+    }
+
+`
+export const HeaderTitleP = styled.p`
+    font-size: 24px;
+    color: white;
+    font-weight:  medium;
+    font-style: italic;
+
+    @media screen and (max-width: 800px){
+        font-size: 20px;
+    }
 `
 
 export const VideoBG = styled.video`
@@ -28,6 +60,18 @@ export const VideoBG = styled.video`
     opacity: 50%;
     z-index: 0;
 `
+
+export const HeaderPicBG = styled.div`
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background: lightblue url("https://i.ibb.co/PCw3z6n/alexander-popov-h-Tv8aa-Pzi-OQ-unsplash.jpg") no-repeat fixed center;
+    opacity: 50%;
+    z-index: 0;
+`
+
+
 export const HeaderContent = styled.div`
     width: 100%;
     z-index: 3;
