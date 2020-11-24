@@ -32,14 +32,23 @@ export const HeaderContent = styled.div`
     z-index: 3;
     max-width: 1200px;
     position: absolute;
-    padding 10px 30px;
+    padding 0px 30px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    top: 0;
+    left: 0;
 `
 export const HeaderH1 = styled.h1 `
     color: #6FFFB0;
-    font-size: 100px;
+    font-size: 50px;
     text-align: center;
     font-family: 'Sarina', cursive;
+`
+export const FormContainer = styled.div`
+    z-index: 3;
+    max-width: 100%;
+    height: 500px;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `

@@ -4,8 +4,8 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/analytics";
 import "firebase/auth";
-import { useAuthState } from "react-firebase-hooks/auth";
 import Header from "../Components/Landing/Header"
+import {FormContainer} from "../Components/Landing/Styled"
 
 
 if(!firebase.apps.length){
@@ -47,17 +47,18 @@ function Landing() {
 
     return (
     <>
-    <Header/>
-
-        {!confirmation ?
-        <form onSubmit={handleSubmit}>
-        <input
-            value={formValue}
-            onChange={(e) => setFormValue(e.target.value)}
-            />
-        <button type="submit">✈️</button>
-        </form> : <h1>Hi</h1>
-        }
+        <Header/>
+        <FormContainer>
+            {!confirmation ?
+            <form onSubmit={handleSubmit}>
+            <input
+                value={formValue}
+                onChange={(e) => setFormValue(e.target.value)}
+                />
+            <button type="submit">✈️</button>
+            </form> : <h1>Hi</h1>
+            }
+        </FormContainer>
     </>
     );
 }
