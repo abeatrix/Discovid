@@ -5,7 +5,6 @@ import Card from 'react-bootstrap/Card'
 const Features = () => {
     return (
         <FeaturesContainer id='features'>
-        <FeaturesHeader>Upcoming / Featured</FeaturesHeader>
         <FeaturesWrapper>
         <Card style={{ width: '18rem' }} className="featurescard">
             <FeaturesIcon src='https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/sites/21/2019/06/30074112/EDCLV2019_0517_181349-_DGD-gallery.jpg'/>
