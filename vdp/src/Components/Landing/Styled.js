@@ -124,6 +124,7 @@ export const FeaturesCard = styled.div`
     height: 300px;
     box-shadow: none;
     transition: all 0.2s ease-in-out;
+    border: 0px!important;
 
     &:hover {
         transform: scale(1.02);
