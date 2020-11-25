@@ -41,25 +41,25 @@ function Dashboard() {
             {!mailinglist && <span>Loading...</span>}
             <h2 className="text-left admintitle" styles={{fontWeight: "700"}}>Newsletter Email Signup List</h2>
             <CardDeck className="mt-5">
-            <Card className="admin-card">
-            <Card.Header className="admin-card">Total Active Signups:</Card.Header>
-                <Card.Body>
+            <Card id="admin-card">
+            <Card.Header id="admin-card">Total Active Signups:</Card.Header>
+                <Card.Body id="admin-card">
                 <Card.Title>
                     {mailinglist && mailinglist.length}
                 </Card.Title>
             </Card.Body>
             </Card>
-            <Card className="admin-card">
-            <Card.Header className="admin-card">MTD Signups:</Card.Header>
-                <Card.Body>
+            <Card id="admin-card">
+            <Card.Header id="admin-card">MTD Signups:</Card.Header>
+                <Card.Body className="admin-card">
                 <Card.Title>
                     {mailinglist && mailinglist.length}
                 </Card.Title>
             </Card.Body>
             </Card>
-            <Card className="admin-card">
-            <Card.Header className="admin-card">Most Recent Signup</Card.Header>
-                <Card.Body>
+            <Card id="admin-card">
+            <Card.Header id="admin-card">Most Recent Signup</Card.Header>
+                <Card.Body id="admin-card">
                 <Card.Title>
                     {mailinglist && mailinglist[0].createdAt.toDate().toDateString()}
                 </Card.Title>

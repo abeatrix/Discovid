@@ -124,7 +124,13 @@
   border-color: #F9FAFB;
 }
 
-.admin-card{
+  #navbtns{
+    display: block;
+    color: white;
+    text-align: center;
+  }
+
+#admin-card{
   border-style: none;
   background-color: #DDE7EC;
   font-weight: bold;

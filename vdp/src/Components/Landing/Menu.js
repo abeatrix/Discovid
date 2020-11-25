@@ -1,10 +1,28 @@
 import React from 'react';
 import {Navbar, Form, FormControl, Nav, Button, Input, InputGroup} from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal'
 import {HeaderH1} from "./Styled";
 import { BsSearch } from 'react-icons/bs';
 import "../../App.css"
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
+
 
 const Menu = () => {
+
+    const [modalShow, setModalShow] = React.useState(false);
+
+    const auth = firebase.auth();
+
+    const [user] = useAuthState(auth);
+
+    const signInWithGoogle = () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        auth.signInWithPopup(provider);
+    }
+
+
     return (
         <>
         <Navbar expand="lg" variant="dark" className="w-100 justify-content-between darknav">
@@ -25,8 +43,8 @@ const Menu = () => {
                     <Nav.Link href="https://discovid19.herokuapp.com/dashboard">Explore</Nav.Link>
                 </Nav>
                 <Form inline id="navbtns">
-                <Button type="submit" variant="link" id="navbtn">Sign In</Button>
-                <Button type="submit" variant="light">Sign Up</Button>
+                    <Button variant="link" id="navbtn" onClick={ signInWithGoogle }>Sign In</Button>
+                    <Button variant="light" onClick={ signInWithGoogle }>Sign Up</Button>
                 </Form>
             </Navbar.Collapse>
         </Navbar>

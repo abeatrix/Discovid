@@ -27,8 +27,8 @@ const AdminMenu = () => {
                     Admin
                     </div>
                 </Nav>
-                <Form inline className="navbtns">
-                <Button type="submit" variant="link" className="navbtn sign-out" onClick={() => auth.signOut()}>Sign out</Button>
+                <Form inline id="navbtns">
+                <Button type="submit" variant="link" className="sign-out" id="navbtn" onClick={() => auth.signOut()}>Sign out</Button>
                 </Form>
             </Navbar.Collapse>
         </Navbar>
